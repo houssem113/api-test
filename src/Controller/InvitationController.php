@@ -102,7 +102,7 @@ class InvitationController extends AbstractController
 
     #[Route('/api/invitations/handle/{id}', name: 'app_handle_invitation', methods:["PUT"])]
     
-    public function cancel(Invitation $invitation, Request $request, EntityManagerInterface $em)
+    public function handle(Invitation $invitation, Request $request, EntityManagerInterface $em)
     {
 
       $actions = ["cancel", "decline", "accept"];
